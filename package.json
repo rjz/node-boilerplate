@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jshint . && ./node_modules/mocha/bin/mocha",
-    "cover": "istanbul cover ./node_modules/mocha/bin/_mocha"
+    "cover": "NODE_ENV=test istanbul cover ./node_modules/mocha/bin/_mocha && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
   },
   "repository": {
     "type": "git",
@@ -19,6 +19,7 @@
   },
   "dependencies": {},
   "devDependencies": {
+    "coveralls": "~2.11.1",
     "istanbul": "~0.3.0",
     "jshint": "~2.5.2",
     "mocha": "~1.13.0"
