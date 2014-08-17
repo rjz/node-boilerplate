@@ -5,11 +5,12 @@
   "main": "index.js",
   "scripts": {
     "test": "node_modules/jshint/bin/jshint && ./node_modules/mocha/bin/mocha",
+    "docs": "node -e 'require(\"./tasks\").docs([\"index.js\"])'",
     "cover": "NODE_ENV=test istanbul cover ./node_modules/mocha/bin/_mocha && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/rjz/REPOSITORY_NAME"
+    "url": "https://github.com/rjz/REPOSITORY_NAME"
   },
   "keywords": [],
   "author": "RJ Zaworski <rj@rjzaworski.com>",
@@ -21,7 +22,7 @@
   "devDependencies": {
     "coveralls": "~2.11.1",
     "glob": "^4.0.5",
-    "hogan": "^1.0.2",
+    "hogan.js": "^1.0.2",
     "istanbul": "~0.3.0",
     "jshint": "~2.5.2",
     "mocha": "~1.13.0",
