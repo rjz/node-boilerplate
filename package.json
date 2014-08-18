@@ -4,20 +4,21 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "node_modules/jshint/bin/jshint && ./node_modules/mocha/bin/mocha",
+    "lint": "node_modules/jshint/bin/jshint",
+    "test": "npm run lint && ./node_modules/mocha/bin/mocha",
     "cover": "NODE_ENV=test istanbul cover ./node_modules/mocha/bin/_mocha && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
     "docs": "node -e 'require(\"./tasks\").docs([\"index.js\"])'",
     "pages": "bash tasks/rebuild-gh-pages.sh"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/rjz/REPOSITORY_NAME"
+    "url": "https://github.com/rjz/node-boilerplate"
   },
   "keywords": [],
   "author": "RJ Zaworski <rj@rjzaworski.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/rjz/REPOSITORY_NAME/issues"
+    "url": "https://github.com/rjz/node-boilerplate/issues"
   },
   "dependencies": {},
   "devDependencies": {
