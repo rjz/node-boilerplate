@@ -6,11 +6,13 @@ set -e
 masterDeps='package.json tasks index.js'
 
 git checkout gh-pages
+
+rm -rf $masterDeps
 git checkout master $masterDeps
 
 # Rebuild documentation and clean deps
 npm run docs
-cp docs/* .
+cp -r docs/* .
 rm -rf $masterDeps
 
 # Commit and push
