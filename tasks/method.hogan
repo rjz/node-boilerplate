@@ -7,7 +7,7 @@
 
     <h3>
       <a name="{{id}}"></a><code>{{id}}</code>
-      <small>(<a href="{{repository}}/tree/master/{{file}}#L{{line}}">definition</a>)</small>
+      <small>(<a href="{{repository.url}}/tree/master/{{file}}#L{{line}}">definition</a>)</small>
     </h3>
   </header>
   <div>

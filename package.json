@@ -28,6 +28,6 @@
     "istanbul": "~0.3.0",
     "jshint": "~2.5.2",
     "mocha": "~1.13.0",
-    "scrawl": "0.0.5"
+    "scrawl-package": "0.0.1"
   }
 }
