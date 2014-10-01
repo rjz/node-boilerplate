@@ -29,7 +29,7 @@ Testing
 
 Lint:
 
-    $ npm lint
+    $ npm run lint
 
 Lint and run test suite:
 
