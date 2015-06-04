@@ -5,18 +5,6 @@ var glob = require('glob'),
     hogan = require('hogan'),
     scrawlPackage = require('scrawl-package');
 
-function fatalOr (orElse) {
-  return function (err, result) {
-    if (err) {
-      process.stderr.write(err.toString() + '\n');
-      process.exit(1);
-    }
-    else {
-      orElse.apply(this, [].slice.call(arguments, 1));
-    }
-  }
-}
-
 function indexBy (arr, key) {
   var indexed = {};
 
