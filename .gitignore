@@ -3,4 +3,5 @@ npm-debug.log
 coverage
 *.swp
 docs
+npm-shrinkwrap.json
 
