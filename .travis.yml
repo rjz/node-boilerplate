@@ -3,5 +3,10 @@ node_js:
   - 0.10
   - 0.12
 
+install:
+  - npm install
+  - npm shrinkwrap
+  - npm run audit
+
 after_success: ./tasks/travis_after_success.sh
 
