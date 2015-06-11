@@ -1,6 +1,11 @@
 Node Boilerplate
 ===============================================================================
 
+[![Build
+Status](https://travis-ci.org/rjz/node-boilerplate.svg?branch=master)](https://travis-ci.org/rjz/node-boilerplate)
+[![Coverage
+Status](https://coveralls.io/repos/rjz/node-boilerplate/badge.svg?branch=master)](https://coveralls.io/r/rjz/node-boilerplate?branch=master)
+
 A boilerplate for node.js projects that includes:
 
   * a nearly-ready package.json
