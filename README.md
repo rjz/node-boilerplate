@@ -13,7 +13,6 @@ A boilerplate for node.js projects that includes:
 
   * linting (via [jshint][jshint])
   * testing (via [mocha][mocha])
-  * code coverage (via [istanbul][istanbul])
   * documentation (via [scrawl][scrawl] and [hogan.js][hoganjs])
   * micrositing (via [github pages][gh-pages])
 
@@ -54,12 +53,11 @@ The following tasks will be run as part of the included, travis-based continuous
 integration flow. However, they're also available manually using `npm run
 <task>`.
 
-Task     | Description
--------- | -------------------------
-`audit`  | Audit dependencies using [nodesecurity.io][nodesecurity]
-`cover`  | Generate code coverage report and push update to coveralls
-`docs`   | Parse comments into HTML documentation
-`pages`  | Publish the documentation to [github pages][gh-pages]
+Task       | Description
+---------- | -------------------------
+`audit`    | Audit dependencies using [nodesecurity.io][nodesecurity]
+`docs`     | Parse comments into HTML documentation
+`pages`    | Publish the documentation to [github pages][gh-pages]
 
 License
 -------------------------------------------------------------------------------

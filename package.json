@@ -6,8 +6,8 @@
   "scripts": {
     "lint": "node_modules/jshint/bin/jshint",
     "pretest": "npm run lint",
-    "test": "./node_modules/mocha/bin/mocha",
-    "cover": "bash tasks/coverage.sh",
+    "test": "./node_modules/.bin/istanbul cover ./node_modules/mocha/bin/_mocha",
+    "posttest": "cat coverage/lcov.info | ./node_modules/.bin/coveralls",
     "docs": "node -e 'require(\"./tasks\").docs([\"index.js\"])'",
     "pages": "bash tasks/rebuild-gh-pages.sh",
     "audit": "bash tasks/vulnerabilities.sh"
