@@ -14,5 +14,8 @@ install:
   - npm shrinkwrap
   - npm run audit
 
+before_script:
+  - export PATH=$PATH:$PWD/node_modules/.bin
+
 after_success: ./tasks/travis_after_success.sh
 
