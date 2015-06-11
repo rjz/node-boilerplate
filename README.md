@@ -4,8 +4,10 @@ Node Boilerplate
 A boilerplate for node.js projects that includes:
 
   * a nearly-ready package.json
-  * stubs for integrating with [travis-ci][travis] and [coveralls.io][coveralls]
-  * a license, contributing guidelines, and this exquisite readme
+  * stubs for continuous integration with [nodesecurity.io][nodesecurity],
+    [travis-ci][travis] and [coveralls.io][coveralls]
+  * contributing guidelines, this exquisite readme, and a copy of the [MIT
+    License](LICENSE.md)
 
 ...plus npm tasks for:
 
@@ -24,35 +26,40 @@ Clone this repository:
 
 ...and copy, fork, customize, and whatever you need to do.
 
-Testing
+
+Continuous Integration
 -------------------------------------------------------------------------------
 
-Lint:
+The included [travis.yml][travis] file sets up continuous integration by:
 
-    $ npm run lint
+  1. auditing dependencies
+  2. running tests
+  3. running code coverage (and shipping results to [coveralls][coveralls])
+  4. rebuilding documentation microsite for [github pages][gh-pages])
+
+Testing
+-------------------------------------------------------------------------------
 
 Lint and run test suite:
 
     $ npm test
 
-Generate code coverage report:
-
-    $ npm run cover
-
 To integrate coveralls.io and travis-ci, add this repo to your coveralls/travis
-accounts and update .coveralls.yml to use the correct repo token (coverage data
-is pushed by the `cover` task).
+accounts and update .coveralls.yml to use the correct repo token.
 
-Documentation
+Additional Tasks
 -------------------------------------------------------------------------------
 
-Parse comments into HTML documentation:
+The following tasks will be run as part of the included, travis-based continuous
+integration flow. However, they're also available manually using `npm run
+<task>`.
 
-    $ npm run docs
-
-Publish the documentation to github:
-
-    $ npm run gh-pages
+Task     | Description
+-------- | -------------------------
+`audit`  | Audit dependencies using [nodesecurity.io][nodesecurity]
+`cover`  | Generate code coverage report and push update to coveralls
+`docs`   | Parse comments into HTML documentation
+`pages`  | Publish the documentation to [github pages][gh-pages]
 
 License
 -------------------------------------------------------------------------------
@@ -67,4 +74,5 @@ MIT
 [mocha]: https://github.com/visionmedia/mocha
 [scrawl]: https://github.com/caolan/scrawl
 [travis]: https://travis-ci.org
+[nodesecurity]: https://nodesecurity.io/
 
