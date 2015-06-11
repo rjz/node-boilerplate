@@ -46,7 +46,7 @@
     </div>
     <footer class="dark">
       <p class="copyright">
-        Another unrepentant production from <a href="http://rjzaworski.com">rj zaworski</a>
+        Node.js boilerplate is another unrepentant production from <a href="http://rjzaworski.com">rj zaworski</a>
       </p>
     </footer>
   </body>
