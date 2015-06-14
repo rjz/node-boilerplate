@@ -9,13 +9,7 @@ sudo: false
 env:
   - NODE_ENV=test
 
-install:
-  - npm install
-  - npm shrinkwrap
-  - nsp audit-shrinkwrap
-
-before_script:
-  - export PATH=$PATH:$PWD/node_modules/.bin
+before_script: ./tasks/travis_before_script.sh
 
 script: npm run cover
 
