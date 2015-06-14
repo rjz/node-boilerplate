@@ -12,10 +12,12 @@ env:
 install:
   - npm install
   - npm shrinkwrap
-  - npm run audit
+  - nsp audit-shrinkwrap
 
 before_script:
   - export PATH=$PATH:$PWD/node_modules/.bin
+
+script: npm run cover
 
 after_success: ./tasks/travis_after_success.sh
 

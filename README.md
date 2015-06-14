@@ -61,6 +61,7 @@ integration flow. However, they're also available manually using `npm run
 Task       | Description
 ---------- | -------------------------
 `lint`     | Lint source without running full tests
+`cover`    | Run tests and generate coverage information
 `audit`    | Audit dependencies using [nodesecurity.io][nodesecurity]
 `docs`     | Parse comments into HTML documentation
 `pages`    | Publish the documentation to [github pages][gh-pages]

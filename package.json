@@ -4,10 +4,10 @@
   "description": "Boilerplate files + tasks for node.js projects",
   "main": "index.js",
   "scripts": {
-    "lint": "jshint",
     "pretest": "npm run lint",
-    "test": "istanbul cover _mocha",
-    "posttest": "cat coverage/lcov.info | coveralls",
+    "test": "mocha",
+    "lint": "jshint",
+    "cover": "istanbul cover _mocha",
     "docs": "node -e 'require(\"./tasks\").docs([\"index.js\"])'",
     "pages": "bash tasks/pages.sh",
     "audit": "bash tasks/audit.sh"
