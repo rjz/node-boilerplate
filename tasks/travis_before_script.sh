@@ -1,11 +1,10 @@
-
 #!/bin/bash
 
 set -e
 
-DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-
+# Add node_modules binaries to the path
 export PATH=$PATH:$PWD/node_modules/.bin
 
+# Audit project dependencies
 npm shrinkwrap && ./tasks/audit.sh
 

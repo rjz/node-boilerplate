@@ -2,12 +2,15 @@
 
 set -e
 
-DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+# Override main branch
+# ONLY changes to this branch will be reported back to coveralls after a
+# successful test run.
+MASTER_BRANCH=master
 
-GIT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
+[[ "$TRAVIS_PULL_REQUEST" == 'false' && "$TRAVIS_BRANCH" == $MASTER_BRANCH ]] || {
+  echo "Skipping post-build tasks for pull request"
+  exit 0;
+}
 
-[ "$GIT_BRANCH" == 'master' ] || exit 0;
-
-npm run pages
-cat "$DIR/../coverage/lcov.info" | "$DIR/../node_modules/.bin/coveralls"
+cat coverage/lcov.info | coveralls
 
