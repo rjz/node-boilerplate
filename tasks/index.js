@@ -2,7 +2,7 @@ var path = require('path'),
     fs = require('fs');
 
 var glob = require('glob'),
-    hogan = require('hogan'),
+    hogan = require('hogan.js'),
     scrawlPackage = require('scrawl-package');
 
 function indexBy (arr, key) {
