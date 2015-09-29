@@ -21,6 +21,9 @@ A boilerplate for node.js projects that includes:
   * documentation (via [scrawl][scrawl] and [hogan.js][hoganjs])
   * micrositing (via [github pages][gh-pages])
 
+**As of v1.0.0, node-boilerplate incorporates features from node >= 4.0.**
+Please use an early version for projects targeting an earlier engine.
+
 Installation
 -------------------------------------------------------------------------------
 

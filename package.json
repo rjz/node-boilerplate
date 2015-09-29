@@ -1,12 +1,15 @@
 {
   "name": "node-boilerplate",
   "version": "0.0.0",
+  "engines": {
+    "node": ">=4.0"
+  },
   "description": "Boilerplate files + tasks for node.js projects",
   "main": "index.js",
   "scripts": {
     "pretest": "npm run lint",
     "test": "mocha",
-    "lint": "jshint",
+    "lint": "eslint .",
     "cover": "istanbul cover _mocha",
     "docs": "node -e 'require(\"./tasks\").docs([\"index.js\"])'",
     "pages": "bash tasks/pages.sh",
@@ -24,12 +27,12 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "coveralls": "~2.11.1",
-    "glob": "^4.0.5",
-    "hogan.js": "^1.0.2",
-    "istanbul": "~0.3.0",
-    "jshint": "~2.5.2",
-    "mocha": "~1.13.0",
+    "coveralls": "^2.11.4",
+    "eslint": "^1.5.1",
+    "glob": "^5.0.15",
+    "hogan.js": "^3.0.2",
+    "istanbul": "^0.3.21",
+    "mocha": "^2.3.3",
     "scrawl-package": "0.0.1"
   }
 }

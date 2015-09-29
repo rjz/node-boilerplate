@@ -1,3 +1,5 @@
+'use strict';
+
 var path = require('path'),
     fs = require('fs');
 
@@ -6,10 +8,10 @@ var glob = require('glob'),
     scrawlPackage = require('scrawl-package');
 
 function indexBy (arr, key) {
-  var indexed = {};
+  let indexed = {};
 
-  arr.forEach(function (item) {
-    var itemKey = item[key];
+  arr.forEach((item) => {
+    const itemKey = item[key];
     indexed[itemKey] = indexed[itemKey] || [];
     indexed[itemKey].push(item);
   });
@@ -18,32 +20,29 @@ function indexBy (arr, key) {
 }
 
 function transformFiles (files) {
-  var indexedMethods = indexBy(files, 'group');
-  return Object.keys(indexedMethods).map(function (group) {
-    return {
-      groupName: group,
-      methods: indexedMethods[group]
-    };
-  })
+  let indexedMethods = indexBy(files, 'group');
+  return Object.keys(indexedMethods).map((groupName) => {
+    return { groupName, methods: indexedMethods[groupName] };
+  });
 }
 
 // Generate documentation
 //
 //    $ npm run-script docs
 //
-module.exports.docs = function (patterns) {
+module.exports.docs = (patterns) => {
 
-  var templateFiles = glob.sync(path.resolve(__dirname, './*.hogan'));
+  const templateFiles = glob.sync(path.resolve(__dirname, './*.hogan'));
 
-  var templates = templateFiles.reduce(function (ts, f) {
+  const templates = templateFiles.reduce((ts, f) => {
     var name = path.basename(f, '.hogan');
     ts[name] = hogan.compile(fs.readFileSync(f, 'utf8'));
     return ts;
   }, {});
 
-  var template = templates['template'];
+  const template = templates['template'];
 
-  var content = scrawlPackage({
+  let content = scrawlPackage({
     match: patterns
   });
 

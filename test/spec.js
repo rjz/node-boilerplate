@@ -1,9 +1,10 @@
-var assert = require('assert');
+'use strict';
 
+var assert = require('assert');
 var add = require('../index');
 
-describe('Project', function () {
-  it('adds two numbers', function () {
+describe('Project', () => {
+  it('adds two numbers', () => {
     assert.equal(4, add(2, 2));
   });
 });
