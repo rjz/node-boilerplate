@@ -7,9 +7,8 @@
   "description": "Boilerplate files + tasks for node.js projects",
   "main": "index.js",
   "scripts": {
-    "pretest": "npm run lint",
+    "pretest": "standard",
     "test": "mocha",
-    "lint": "eslint .",
     "cover": "istanbul cover _mocha",
     "docs": "node -e 'require(\"./tasks\").docs([\"index.js\"])'",
     "pages": "bash tasks/pages.sh",
@@ -29,11 +28,11 @@
   "dependencies": {},
   "devDependencies": {
     "coveralls": "^2.11.4",
-    "eslint": "^1.5.1",
     "glob": "^5.0.15",
     "hogan.js": "^3.0.2",
     "istanbul": "^0.3.21",
     "mocha": "^2.3.3",
-    "scrawl-package": "0.0.1"
+    "scrawl-package": "0.0.1",
+    "standard": "^5.3.1"
   }
 }

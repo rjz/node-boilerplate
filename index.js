@@ -1,4 +1,4 @@
-'use strict';
+'use strict'
 
 /**
  * A module to add two numbers
@@ -12,6 +12,6 @@
  * @param {Number} b - the second number
  */
 module.exports = function add (a, b) {
-  return a + b;
-};
+  return a + b
+}
 
