@@ -4,5 +4,3 @@ coverage
 *.swp
 docs
 npm-shrinkwrap.json
-.eslintrc
-
