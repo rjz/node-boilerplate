@@ -9,8 +9,8 @@ Status](https://coveralls.io/repos/rjz/node-boilerplate/badge.svg?branch=master)
 A boilerplate for node.js projects that includes:
 
   * a nearly-ready package.json
-  * stubs for continuous integration with [nodesecurity.io][nodesecurity],
-    [travis-ci][travis] and [coveralls.io][coveralls]
+  * stubs for continuous integration with [travis-ci][travis] and
+    [coveralls.io][coveralls]
   * contributing guidelines, this exquisite readme, and a copy of the [MIT
     License](LICENSE.md)
 
@@ -39,10 +39,9 @@ Continuous Integration
 
 The included [travis.yml][travis] file sets up continuous integration by:
 
-  1. auditing dependencies
-  2. running tests
-  3. running code coverage (and shipping results to [coveralls][coveralls])
-  4. rebuilding documentation microsite for [github pages][gh-pages])
+  1. running tests
+  2. running code coverage (and shipping results to [coveralls][coveralls])
+  3. rebuilding documentation microsite for [github pages][gh-pages])
 
 Testing
 -------------------------------------------------------------------------------
@@ -65,7 +64,6 @@ Task       | Description
 ---------- | -------------------------
 `lint`     | Lint source without running full tests
 `cover`    | Run tests and generate coverage information
-`audit`    | Audit dependencies using [nodesecurity.io][nodesecurity]
 `docs`     | Parse comments into HTML documentation
 `pages`    | Publish the documentation to [github pages][gh-pages]
 

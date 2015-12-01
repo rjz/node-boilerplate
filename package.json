@@ -11,8 +11,7 @@
     "test": "mocha",
     "cover": "istanbul cover _mocha",
     "docs": "node -e 'require(\"./tasks\").docs([\"index.js\"])'",
-    "pages": "bash tasks/pages.sh",
-    "audit": "bash tasks/audit.sh"
+    "pages": "bash tasks/pages.sh"
   },
   "repository": {
     "type": "git",
