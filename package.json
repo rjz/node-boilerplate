@@ -9,7 +9,7 @@
   "scripts": {
     "pretest": "standard",
     "test": "mocha",
-    "cover": "istanbul cover _mocha",
+    "cover": "bash tasks/coverage.sh",
     "docs": "node -e 'require(\"./tasks\").docs([\"index.js\"])'",
     "pages": "bash tasks/pages.sh"
   },
